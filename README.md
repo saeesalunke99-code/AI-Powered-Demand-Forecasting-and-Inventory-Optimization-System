@@ -54,3 +54,41 @@ Historical Sales + Inventory Data
        Reorder Recommendation
               ↓
        Streamlit Dashboard
+
+       ## 📊 Sample Analysis
+
+### Example: Store S001 – Product P0001
+
+| Metric | Result |
+|---|---:|
+| Predicted Daily Demand | 128 units |
+| Current Inventory | 223 units |
+| Reorder Point | 1,275 units |
+| Recommended Order | 1,052 units |
+
+### Interpretation
+
+For this store-product combination, the model predicts approximately **128 units of daily demand**.
+
+Based on the defined inventory assumptions, the calculated reorder point is **1,275 units**. Since the current inventory of **223 units** is below the reorder point, the system recommends ordering approximately **1,052 units**.
+
+### Key Analysis
+
+- **Inventory vs Sales correlation:** ~0.59
+- The analysis shows a positive relationship between inventory levels and units sold. However, correlation does not imply causation.
+- **Model MAE:** 68.99
+- **Model RMSE:** 88.26
+- **Model MAPE:** 250.47%
+- MAPE is high because percentage error can become unstable when actual sales values are small. Therefore, MAE and RMSE are more useful metrics for interpreting this model's error.
+
+### Visual Analysis
+
+The project includes the following visual analyses:
+
+- **Monthly Sales Trend** — `monthly_sales.png`
+- **Inventory vs Sales** — `inventory_vs_sales.png`
+- **Actual vs Predicted Demand** — `actual_vs_predicted.png`
+
+The overall workflow is:
+
+**Historical Data → Data Analysis → ML Prediction → Inventory Optimization → Reorder Recommendation**
